@@ -2,6 +2,7 @@
 spring:
   config.activate.on-profile: default
   sql.init.schema-locations: classpath:schema-h2.sql
+  devtools.restart.trigger-file: .reloadtrigger
 cds:
   datasource.auto-config.enabled: false
   sql.supportedLocales: "*"
