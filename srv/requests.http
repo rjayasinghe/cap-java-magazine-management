@@ -1,0 +1,12 @@
+POST http://localhost:8080/odata/v4/acme.magazine.service.MagazineCatalogService/Issues
+Content-Type: application/json
+
+{
+    "IssueNo" : 1,
+    "ReleaseDate" : "2023-06-27",
+    "FocusTopic" : "Java Frameworks Domain Driven Design"
+}
+
+###
+
+GET http://localhost:8080/odata/v4/acme.magazine.service.MagazineCatalogService/Issues
