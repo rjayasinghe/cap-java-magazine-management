@@ -2,15 +2,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>hello-java-parent</artifactId>
-		<groupId>customer</groupId>
+		<artifactId>magazine-issue-management-parent</artifactId>
+		<groupId>com.acme</groupId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>hello-java</artifactId>
+	<artifactId>magazine-issue-management</artifactId>
 	<packaging>jar</packaging>
 
-	<name>hello-java</name>
+	<name>Magazine Issue Management</name>
 
 	<!-- ACTUAL DEPENDENCIES -->
 	<dependencies>
