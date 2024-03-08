@@ -1,8 +1,10 @@
----
 spring:
   config.activate.on-profile: default
   sql.init.schema-locations: classpath:schema-h2.sql
   devtools.restart.trigger-file: .reloadtrigger
+  web.resources.static-locations: file:./app/
 cds:
+  odata-v4.endpoint.path: "/"
   datasource.auto-config.enabled: false
   sql.supportedLocales: "*"
+logging.level.com.sap.cds.persistence.sql: DEBUG
