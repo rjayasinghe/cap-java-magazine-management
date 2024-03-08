@@ -1,4 +1,4 @@
-package customer.hello_java;
+package com.acme.magazine.issues;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

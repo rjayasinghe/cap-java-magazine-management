@@ -1,4 +1,4 @@
-package customer.hello_java.handlers;
+package com.acme.magazine.issues.handlers;
 
 import org.springframework.stereotype.Component;
 
