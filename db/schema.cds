@@ -1,17 +1,19 @@
 namespace acme.magazine;
 
 entity Issues {
-    key Id : UUID;
-    IssueNo : Integer;
-    ReleaseDate : Date;
-    FocusTopic : String;
-}
+    key Id          : UUID;
+        IssueNo     : Integer;
+        ReleaseDate : Date;
+        FocusTopic  : String;
+        IsPublished : Boolean;
+        Articles : Composition of many Articles;
+};
 
 entity Articles {
     key Id : UUID;
     Title : String;
-    Author : String;
-    TextBody : LargeString
+    TextBody : LargeString;
+    Author : Association to one Authors;
 }
 
 entity Authors {
