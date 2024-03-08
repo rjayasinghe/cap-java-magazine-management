@@ -1,0 +1,4 @@
+specVersion: "2.5"
+metadata:
+  name: com.sap.cds.magazines
+type: application
