@@ -1,20 +1,8 @@
-POST http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues
-Content-Type: application/json
-
-{
-    "Id" : "8F78259F-585F-419C-AC0F-138D0E7E3D2B",
-    "IssueNo" : 1,
-    "ReleaseDate" : "2023-06-27",
-    "FocusTopic" : "Java Frameworks Domain Driven Design"
-}
+GET http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(3FA346FC-CBA8-4FA2-86FC-A2EE1A3E3D0E)?$expand=Articles($expand=Author)
 
 ###
 
-GET http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(8F78259F-585F-419C-AC0F-138D0E7E3D2B)
-
-###
-
-POST http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(8F78259F-585F-419C-AC0F-138D0E7E3D2B)/acme.magazine.service.MagazineCatalogService.publish
+POST http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(3FA346FC-CBA8-4FA2-86FC-A2EE1A3E3D0E)/acme.magazine.service.MagazineCatalogService.publish
 Content-Type: application/json
 
 {}

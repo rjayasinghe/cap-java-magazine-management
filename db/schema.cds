@@ -6,13 +6,14 @@ entity Issues {
         ReleaseDate : Date;
         FocusTopic  : String;
         IsPublished : Boolean;
-        Articles : Composition of many Articles;
+        Articles : Composition of many Articles on Articles.Issue = $self;
 };
 
 entity Articles {
     key Id : UUID;
     Title : String;
     TextBody : LargeString;
+    Issue : Association to one Issues;
     Author : Association to one Authors;
 }
 
@@ -22,4 +23,8 @@ entity Authors {
     LastName : String;
     EMail : String;
     Photo : LargeBinary;
+}
+
+entity Foobar {
+    Foo : String;
 }
