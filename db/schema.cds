@@ -9,6 +9,7 @@ entity Issues {
         Articles : Composition of many Articles on Articles.Issue = $self;
 };
 
+@cds.autoexpose
 entity Articles {
     key Id : UUID;
     Title : String;
@@ -17,14 +18,11 @@ entity Articles {
     Author : Association to one Authors;
 }
 
+@cds.autoexpose
 entity Authors {
     key Id : UUID;
     FirstName : String;
     LastName : String;
     EMail : String;
     Photo : LargeBinary;
-}
-
-entity Foobar {
-    Foo : String;
 }
