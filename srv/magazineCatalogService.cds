@@ -7,4 +7,10 @@ service MagazineCatalogService {
         action publish();
         action createInvoices();
     };
+
+    event AuthorInvoiceIssued{
+        Name : String;
+        Email : String;
+        Title : String;
+    };
 }

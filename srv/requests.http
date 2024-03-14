@@ -6,3 +6,9 @@ POST http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(3
 Content-Type: application/json
 
 {}
+###
+
+POST http://localhost:8080/acme.magazine.service.MagazineCatalogService/Issues(3FA346FC-CBA8-4FA2-86FC-A2EE1A3E3D0E)/acme.magazine.service.MagazineCatalogService.createInvoices
+Content-Type: application/json
+
+{}

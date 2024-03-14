@@ -1,4 +1,4 @@
-package com.acme.magazine.issues.handlers;
+package com.acme.magazine.issues.handlers.issues;
 
 import org.springframework.stereotype.Component;
 
@@ -15,11 +15,11 @@ import cds.gen.acme.magazine.service.magazinecatalogservice.PublishContext;
 
 @Component
 @ServiceName(MagazineCatalogService_.CDS_NAME)
-public class IssuePublishHandler implements EventHandler {
+public class PublishHandler implements EventHandler {
 
     private final MagazineCatalogService service;
 
-    public IssuePublishHandler(MagazineCatalogService service) {
+    public PublishHandler(MagazineCatalogService service) {
         this.service = service;
     }
 
