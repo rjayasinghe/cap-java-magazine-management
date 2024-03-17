@@ -13,4 +13,7 @@ This is a fictionary application that could be used to manage magazine issues. T
 
 Easiest way to start the app locally: `mvn spring-boot:run`
 
- 
+## Versions <-> Article Parts
+
+* [Part 1](https://github.com/rjayasinghe/cap-java-magazine-management/releases/tag/part1)
+* [Part 2](https://github.com/rjayasinghe/cap-java-magazine-management/releases/tag/part2)
