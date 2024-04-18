@@ -1,8 +1,4 @@
 spring:
-  config.activate.on-profile: default
-  devtools.restart.trigger-file: .reloadtrigger
-  web.resources.static-locations: file:./app/
-  sql.init.schema-locations: classpath:schema.sql
   sql:
     init:
       mode: always
@@ -12,8 +8,31 @@ spring:
     hikari:
       maximum-pool-size: 1
       max-lifetime: 0
+---
+spring:
+  config.activate.on-profile: default
+  devtools.restart.trigger-file: .reloadtrigger
+  web.resources.static-locations: file:./app/
+  sql.init.schema-locations: classpath:schema.sql
 cds:
   odata-v4.endpoint.path: "/"
   datasource.auto-config.enabled: false
   sql.supportedLocales: "*"
 #logging.level.com.sap.cds.persistence.sql: DEBUG
+---
+spring:
+  config.activate.on-profile: local-multitenancy
+cds:
+  security.mock.users:
+    alice:
+      tenant: t1
+      roles: [ cds.Subscriber, admin ]
+    bob:
+      tenant: t1
+      roles: [ cds.ExtensionDeveloper, cds.UIFlexDeveloper ]
+    erin:
+      tenant: t2
+      roles: [ cds.Subscriber, admin, cds.ExtensionDeveloper, cds.ExtensionDeveloper, cds.UIFlexDeveloperUIFlexDeveloper ]
+  multi-tenancy:
+    mtxs.enabled: true
+    sidecar.url: http://localhost:4005/ # in production mode overwrite with the URL from mta.yaml

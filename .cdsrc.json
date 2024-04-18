@@ -1,5 +1,14 @@
 {
     "build": {
         "target": "."
+    },
+    "profiles": [
+        "with-mtx-sidecar",
+        "java"
+    ],
+    "requires": {
+        "[local-multitenancy]": {
+            "multitenancy": true
+        }
     }
 }
