@@ -1,10 +1,19 @@
 spring:
   config.activate.on-profile: default
-  sql.init.schema-locations: classpath:schema-h2.sql
   devtools.restart.trigger-file: .reloadtrigger
   web.resources.static-locations: file:./app/
+  sql.init.schema-locations: classpath:schema.sql
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: "jdbc:sqlite:file::memory:?cache=shared"
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 1
+      max-lifetime: 0
 cds:
   odata-v4.endpoint.path: "/"
   datasource.auto-config.enabled: false
   sql.supportedLocales: "*"
-logging.level.com.sap.cds.persistence.sql: DEBUG
+#logging.level.com.sap.cds.persistence.sql: DEBUG

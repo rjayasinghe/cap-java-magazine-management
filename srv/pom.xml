@@ -40,10 +40,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -118,7 +119,7 @@
 						<configuration>
 							<commands>
 								<command>build --for java</command>
-								<command>deploy --to h2 --dry &gt; "${project.basedir}/src/main/resources/schema-h2.sql"</command>
+								<command>deploy --to sqlite --dry &gt; "${project.basedir}/src/main/resources/schema.sql"</command>
 							</commands>
 						</configuration>
 					</execution>
