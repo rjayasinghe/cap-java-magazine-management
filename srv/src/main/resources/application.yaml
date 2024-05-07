@@ -29,10 +29,12 @@ cds:
       roles: [ cds.Subscriber, admin ]
     bob:
       tenant: t1
-      roles: [ cds.ExtensionDeveloper, cds.UIFlexDeveloper ]
+      roles: [ cds.Subscriber, admin ]
     erin:
       tenant: t2
-      roles: [ cds.Subscriber, admin, cds.ExtensionDeveloper, cds.ExtensionDeveloper, cds.UIFlexDeveloperUIFlexDeveloper ]
+      roles: [ cds.Subscriber, admin ]
   multi-tenancy:
     mtxs.enabled: true
     sidecar.url: http://localhost:4005/ # in production mode overwrite with the URL from mta.yaml
+logging.level.com.sap.cds.multitenancy: DEBUG
+logging.level.com.sap.cds.persistence.sql-tx: DEBUG

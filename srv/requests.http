@@ -3,6 +3,11 @@ Authorization: Basic YWxpY2U6
 
 ###
 
+GET http://localhost:8080/odata/v4/acme.magazine.service.MagazineCatalogService/Issues(3FA346FC-CBA8-4FA2-86FC-A2EE1A3E3D0E)?$expand=Articles($expand=Author)
+Authorization: Basic ZXJpbjo=
+
+###
+
 POST http://localhost:8080/odata/v4/acme.magazine.service.MagazineCatalogService/Issues(3FA346FC-CBA8-4FA2-86FC-A2EE1A3E3D0E)/acme.magazine.service.MagazineCatalogService.publish
 Content-Type: application/json
 
