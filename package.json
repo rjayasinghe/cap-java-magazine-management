@@ -9,5 +9,8 @@
   ],
   "devDependencies": {
     "@sap/ux-specification": "^1.120.0"
-  }
+  },
+  "workspaces": [
+    "mtx/sidecar"
+  ]
 }
